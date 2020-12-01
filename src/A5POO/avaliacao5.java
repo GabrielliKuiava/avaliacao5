@@ -10,41 +10,39 @@ public class avaliacao5 {
     
     for (int i = 0; i < 10; i++) {
         
-   int op =Integer.parseInt(JOptionPane.showInputDialog(null, "\n Escolha a opção desejada:\n 1- Cadastrar Cliente\n 2- Checkin Moto \n 3- Checkin Carro \n 4- Checkout Moto\n 5- Checkout Carro"));
+   int op =Integer.parseInt(JOptionPane.showInputDialog(null, "\nOlá Seja Bem Vindo sou Alexy"
+           + "\nSeu assistente Virtual de Parquimetro \n\nDigite \n\n 1- Cadastrar Moto\n 2- Cadastrar Carro"));
    
   switch(op){
             
      case 1:
-        Cliente cli = new Cliente();
-        cli.nome = JOptionPane.showInputDialog("Informe o nome: ");
-        cli.cpf = JOptionPane.showInputDialog("Informe o CPF:");
-        cli.dataNascimento= JOptionPane.showInputDialog("Informe a data de nascimento:");
-        cli.telefone= JOptionPane.showInputDialog("Informe o número de telefone:");
-        cli.cadastrar();
+        Cliente carro = new Cliente();
+        carro.nome = JOptionPane.showInputDialog("Informe o nome: ");
+        carro.cpf = JOptionPane.showInputDialog("Informe o CPF: ");
+        carro.placa = JOptionPane.showInputDialog("Informe a placa do veiculo: ");
+        carro.telefone = JOptionPane.showInputDialog("Informe o número de telefone: ");
+        carro.cadastrar();
+        carro.imprimir();
+        
+        switch(op){
+        case 1:
+            carro.email();
+            
+            break;
+        case 2:
+            break;
+     }
         break;
         
      case 2:
-        Moto mot = new Moto();
-        mot.placa = JOptionPane.showInputDialog("Informe a Placa: ");
-        mot.modelo = JOptionPane.showInputDialog("Informe o modelo: ");
-        mot.cor = JOptionPane.showInputDialog("Informe a cor: ");
-        mot.capacete = Integer.parseInt(JOptionPane.showInputDialog(null, "Quantos capacetes possui?"));
-        mot.chekin();
-        //falta validar vaga
-        break;
-     case 3:
-         Carro car = new Carro();
-         car.placa = JOptionPane.showInputDialog("Informe a placa: ");
-         car.modelo= JOptionPane.showInputDialog("Informe o modelo:");
-         car.cor= JOptionPane.showInputDialog("Informe a cor:");
-         car.nPortas = Integer.parseInt(JOptionPane.showInputDialog(null, "Quantas portas possui?"));
-         car.chekin();
-          //falta validar vaga
-         
-     case 4:
-         
-     case 5:
-     
+        Cliente moto = new Cliente();
+        moto.nome = JOptionPane.showInputDialog("Informe o nome: ");
+        moto.cpf = JOptionPane.showInputDialog("Informe o CPF: ");
+        moto.placa = JOptionPane.showInputDialog("Informe a placa do veiculo: ");
+        moto.telefone= JOptionPane.showInputDialog("Informe o número de telefone: ");
+        moto.cadastrar();
+       
+
    
    }
         

@@ -1,28 +1,30 @@
 package A5POO;
 
-import java.text.SimpleDateFormat;
+
 import java.util.Date;
 import javax.swing.JOptionPane;
 
 public class Carro extends Veiculos {
    
     public int nPortas;
-    public Date horaEntradaCarro;
-    public Date horaSaidaCarro;
+    public double horaEntradaCarro;
+    public double horaSaidaCarro;
+    public String vagaCarro[] = new String[20];
     
     public Carro() {
         
     }
     
-    public void chekin(){
-        this.horaEntradaCarro = new Date();
+    public void checkin(){
+       
+        
         JOptionPane.showMessageDialog(null,  " Chekin do carro realizado!");   
     }
-    
+                                                                              
     public void checkout(){
-        this.horaSaidaCarro = new Date();
-        long periodoEstacionado = Math.abs(horaSaidaCarro.getTime() - horaEntradaCarro.getTime());
-        JOptionPane.showMessageDialog(null,  " Chekout realizado!"); 
+//        this.horaSaidaCarro = new Date();
+//        long periodoEstacionado = Math.abs(horaSaidaCarro.getTime() - horaEntradaCarro.getTime());
+//        JOptionPane.showMessageDialog(null,  " Chekout realizado!"); 
     }
 
 
